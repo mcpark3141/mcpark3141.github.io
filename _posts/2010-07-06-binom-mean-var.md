@@ -1,33 +1,11 @@
 ---
-title:  "github.io 블로그 시작하기"
-excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
+title:  "이항분포의 평균과 분산"
+excerpt: "확률변수 \\(K\\)의 확률분포함수가"
 
 categories:
   - Blog
 tags:
   - Blog
-#last_modified_at: 2019-04-13T08:06:00-05:00
 ---
-
-GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
-GitHub Blog 서비스의 이름은 Pages이다.
-
-Pages가 다른 블로그 플랫폼 보다 편한 것 같아서 마음에 든다.
-다른 사람들도 같이 많이 사용했으면 좋겠다는 생각이 든다.
-
-YFM에서 정의한 제목을 이중 괄호 구문으로 본문에 추가할 수 있다.
-이 글의 제목은 {{ page.title }}
-
-$$
-\frac{\mathrm{d}}{\mathrm{d}x}\int_{a}^{x}f(t)\,\mathrm{d}t = f(x).
-$$
-
-\begin{equation}
-\label{eq:pt}
-\frac{\mathrm{d}}{\mathrm{d}y}\int_{a}^{y}f(t)\,\mathrm{d}t = f(y).
-\end{equation}
-
-수식 \eqref{eq:pt}의 내용이 의미하는 바는...
-
 
 확률변수 \\(K\\)의 확률분포함수가 \\[f_{K}(k)=\binom{n}{k}p^{k}q^{n-k}\\] 로 주어지는 경우 평균과 분산을 구해본다. 평균을 \\(E[K] = \bar{K}\\)라 하면 \\(\bar{K}\\)는 다음과 같다. \\[\bar{K} = \sum_{k=0}^{n}kf_{K}(k).\\] 여기서는 미분을 이용해 이 값을 구해보도록 한다. \\[(x+q)^{n} = \sum_{k=0}^{n}\binom{n}{k}x^{k}q^{n-k}\\] 의 양변을 \\(x\\)에 대해 미분하고 \\(x\\)를 곱하면 \begin{align}nx(x+q)^{n-1} = \sum_{k=0}^{n}k\binom{n}{k}x^{k}q^{n-k} \tag{1} \end{align}이다. 여기서 \\(x = p\\)를 대입하면 \\(p+q = 1\\)이고 (1)의 우변은 \\(\bar{K}\\)이므로 \\(\bar{K} = np\\)이다. 한편 분산은 다음과 관계를 만족함이 알려져 있다. \\[\sigma_{K}^{2} = E[K^{2}]-\bar{K}^{2}.\\]여기서 \\(\bar{K}\\)는 이미 구했으므로 \\(E[K^{2}]\\)를 구하도록 한다. \\[E[K^{2}] = \sum_{k=0}^{n}k^{2}f_{K}(k).\\] 이고 이를 찾기 위해 (1)의 양변을 \\(x\\)에 대해 한 번 더 미분하고 다시 \\(x\\)를 곱하면 다음과 같다. \\[nx(x+q)^{n-1} + n(n-1)x^{2}(x+q)^{n-2} = \sum_{k=0}^{n}k^{2}\binom{n}{k}x^{k}q^{n-k}.\\] 이제 \\(x = p\\)를 대입하면 \\(p+q = 1\\)이므로 이를 정리하면 다음과 같다. \\[E[K^{2}] = \sum_{k=0}^{n}k^{2}\binom{n}{k}p^{k}q^{n-k} = np+n^{2}p^{2}-np^{2}.\\] 따라서 분산은 다음과 같다. \\[\sigma_{K}^{2} = E[K^{2}]-\bar{K}^{2} = (np+n^{2}p^{2}-np^{2})-(np)^{2} = np(1-p) = npq.\\]
