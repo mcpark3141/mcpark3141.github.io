@@ -224,7 +224,7 @@ plugins:
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
-    date-format: '%d-%b-%y'
+    date-format: 'Last modified: %b %d, %Y'
 
 # mimic GitHub Pages with --safe
 whitelist:
