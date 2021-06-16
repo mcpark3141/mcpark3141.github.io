@@ -30,6 +30,8 @@ layout: default
           {% include page__meta.html %}
         </header>
       {% endunless %}
+	  
+	  {% last_modified_at %}
 
       <section class="page__content" itemprop="text">
         {% if page.toc %}
